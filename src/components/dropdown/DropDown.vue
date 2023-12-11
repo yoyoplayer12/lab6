@@ -8,7 +8,7 @@
         },
     });
 
-    const selectedoption = ref(null);
+    const selectedoption = ref('Jeff');
     const DropDownVisible = ref(false);
 
     const emit = defineEmits(['selected'])
@@ -30,7 +30,7 @@
 <template>
     <div class="dropdown">
         <div class="dropdown-selected" :class="{ 'dropdown-visible': DropDownVisible }" @click="DropDownVisible = !DropDownVisible">
-            {{ selectedoption || "Select" }}
+            {{ selectedoption || "Jeff" }}
         </div>
         <div class="options-wrapper" v-if="DropDownVisible">
             <div class="option" v-for="(option, index) in options" :key="index" @click="pickOption(option)">
