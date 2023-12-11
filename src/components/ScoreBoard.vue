@@ -1,5 +1,5 @@
 <script setup>
-import DropDown from '../dropdown/dropdown.vue'
+import DropDown from './dropdown/DropDown.vue'
 import { ref, onMounted } from 'vue'
 
 const addedScore = ref(null);
