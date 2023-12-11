@@ -10,8 +10,7 @@ const userScore = ref([]);
 let socket = null;
 onMounted(() => {
     fetchScores();
-    // socket = new WebSocket('wss://lab6api.onrender.com/primus');
-    socket = new WebSocket('ws://localhost:3000/primus');
+    socket = new WebSocket('wss://lab6api.onrender.com/primus');
     //listen for messages to websockets server (post)
     socket.onmessage = (event) => {
         let newScore = JSON.parse(event.data);
@@ -25,8 +24,7 @@ onMounted(() => {
 
 const fetchScores = async () => {
     //fetch scores from api
-    // const response = await fetch('https://lab6api.onrender.com/');
-    const response = await fetch('http://localhost:3001/');
+    const response = await fetch('https://lab6api.onrender.com/');
     if (!response.ok) {
         console.error('Failed to fetch scores: ', response.statusText);
         return;
