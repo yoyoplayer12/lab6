@@ -2,8 +2,8 @@
 import DropDown from './dropdown/DropDown.vue'
 import { ref, onMounted } from 'vue'
 
-const addedScore = ref(null);
-const selectedOption = ref(null);
+const addedScore = ref(0);
+const selectedOption = ref('Jeff');
 const options = ref([]);
 const userScore = ref([]);
 
